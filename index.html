@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Mathavan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0538a1ea96.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="namelogo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>MERN Fullstack Developer</p>
+                <h1>Hi, I'm <span>Mathavan</span><br/> From India</h1>
+            </div>
+        </div>
+
+    </div>
+    <!----about----->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="" alt="image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>(about me)</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div id='skills' class="tab-contents active-tab">
+                        <ul>
+                            <li><span>MERN</span><br/>Fullstack Developer</li>
+                            <li><span>Web Development</span><br/>Web app Development</li>
+                            
+                        </ul>
+                    </div>
+                    <div id='experience' class="tab-contents">
+                        <ul>
+                            <li><span>####</span><br/>#######</li>
+                        </ul>
+                    </div>
+                    <div id="education" class="tab-contents">
+                        <ul>
+                            <li><span>#####</span><br/>#######</li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----Services---->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>---Description---</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Web Application</h2>
+                    <p>---Description---</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="" alt="works">
+                    <div class="layer">
+                        <h3>Work title 1</h3>
+                        <p>description</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="" alt="works">
+                    <div class="layer">
+                        <h3>Work title 2</h3>
+                        <p>description</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn">See more</a>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabContents = document.getElementsByClassName('tab-contents');
+        
+        function opentab(tabName) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            };
+            for(tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            };
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add('active-tab');
+        };
+
+    </script>
+</body>
+</html>
